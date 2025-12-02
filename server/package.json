@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "npx ts-node src/index.ts",
+    "start": "node dist/sse-server.js",
+    "start:stdio": "node dist/server.js",
+    "dev": "npx ts-node src/sse-server.ts",
+    "dev:stdio": "npx ts-node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,9 +18,13 @@
   "dependencies": {
     "@mcp-ui/server": "^5.16.1",
     "@modelcontextprotocol/sdk": "^1.23.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
     "zod": "^4.1.13"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
